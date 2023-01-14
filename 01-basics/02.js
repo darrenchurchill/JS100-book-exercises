@@ -11,19 +11,18 @@
  * 4. ones place is 6
  */
 
-const num = 4936;
+let num = 4936;
 
-const thousands = Math.floor(num / Math.pow(10, 3));
-let remainder = num % Math.pow(10, 3);
+const ones = num % 10;
+num = Math.floor(num / 10);
 
-const hundreds = Math.floor(remainder / Math.pow(10, 2));
-remainder = num % Math.pow(10, 2);
+const tens = num % 10;
+num = Math.floor(num / 10);
 
-const tens = Math.floor(remainder / Math.pow(10, 1));
-remainder = num % Math.pow(10, 1);
+const hundreds = num % 10;
+num = Math.floor(num / 10);
 
-const ones = Math.floor(remainder / Math.pow(10, 0));
-remainder = num % Math.pow(10, 0);
+const thousands = num % 10;
 
 console.log(thousands);
 console.log(hundreds);
