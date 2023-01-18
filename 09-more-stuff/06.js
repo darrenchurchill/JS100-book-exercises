@@ -9,14 +9,7 @@
  */
 
 function allMatches(words, regex) {
-  return words.reduce(
-    (accum, word) => {
-      if (regex.test(word))
-        accum.push(word);
-      return accum;
-    },
-    []
-  );
+  return words.filter(word => regex.test(word));
 }
 
 let words = [
