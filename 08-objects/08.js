@@ -14,7 +14,7 @@
 
 function copyObj(obj, keys) {
   if (!keys)
-    keys = Object.keys(obj);
+    return Object.assign({}, obj);
 
   result = {};
   keys.forEach(key => result[key] = obj[key]);
