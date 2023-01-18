@@ -13,9 +13,4 @@ let obj = {
   c: 3,
 };
 
-let upperKeys = [];
-for (let key in obj) {
-  upperKeys.push(key.toUpperCase());
-}
-
-console.log(upperKeys);
+console.log(Object.keys(obj).map(k => k.toUpperCase()));
