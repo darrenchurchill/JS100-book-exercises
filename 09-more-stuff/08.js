@@ -12,7 +12,8 @@
  */
 
 function isNotANumber(value) {
-  return typeof value === 'number' && !(value < Infinity) && !(value > Infinity);
+  // NaN is the __only__ value in JavaScript that isn't equal to itself!
+  return value !== value;
 }
 
 console.log(isNotANumber(NaN));
